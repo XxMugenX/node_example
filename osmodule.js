@@ -1,0 +1,7 @@
+//built in module
+const os =require('os')
+
+const user= os.userInfo()
+console.log(user)
+//or
+console.log(`system uptime is ${os.uptime()} seconds`)
