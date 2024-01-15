@@ -1,0 +1,16 @@
+port are lol portals ,a connection between two locations ,there are different kinds of ports from (0 to 65535), the common port(0 to 1024), the registered port(1025 to ) ,the epheremal ports
+FTP port file transfer protocol is used to send data at port 20 and 21 ,http hyper text transfer protocol at port 80 is used to send over html data,SSH secure shell host, for communication through terminals, HTTPS hypertext transfer protocol secure send its data over port 443 using a TLS transfer layer socket or SSL a secure socket layer
+examp remote address 138.68.239.6:port, 443 being that the address is being accessed through https and 22 being that the address is being accessed through SSH the port can differ, depending on how the adderss is being accessed
+content-type is a header
+multimedia internet mail extention, a media type
+mime types are labels used to identify a certain type of data  eg, the text/html(type/subtype)
+  writehead and then using write nested in an if/else block....well, when you use the res.end() method as usual to end the response to the server after handling a request, you will get an error message
+ ' node:events:491
+      throw er; // Unhandled 'error' event
+      ^
+
+Error [ERR_STREAM_WRITE_AFTER_END]: write after end'
+
+this says that the code still writes after ending the response which shouldnt be so
+to handle this error, a return is used at the end of every is/else block to ensre that the code block is terminated after the end method....a fail safe method lol  
+middleware services are services that allow easy interaction, or connection between your app and another application to get functionalities that are beyond what the os of the system can give

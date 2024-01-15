@@ -1,0 +1,21 @@
+when pushing a package to a git repository, do not push the dependencies with the code, create a  package.json file "npm init" stuff...find it at "npm.js"
+this will store the various dependencies name and their versions required to make the package run 
+then to seclude or prevent some selected files from being pushed,you write those files/directory into a .gitignore file
+git add . adds all files with a dot and keeps them in a working tree 
+git ststus checks the tree to see what are in the working tree
+git commit -m "commit message", sticks a message to the files in the working tree and groups them for pushing
+git branch -m main 
+git remote add origin <url of repository> 
+git push -u origin main
+
+when using a cloned repository, remember that your npm installed dependencies wont be available till you install them on the machine on which you cloned the repository
+open up the repo on the machine and typr in "npm install"
+this installs all necessary dependacies by reading them from the package.json file
+npm start, where start is a script in the packagr.json ,npm run dev, also a script in the json
+npm uninstall <packagename> uninstalls the package
+for global installation of a package use npm install -g <packagename> 
+installing a package globally gives all folder in a machine the access to that package installed
+
+
+when there is a blocking code in a response from a http server and the response is not set up asynchronously,,then other user of the http server will get blocked out since  the blocking code is a synchronous one and thus needs to be completly processed before the code can go over to do other processes such as responding to other clients request, so its a nice thing to set your code asynchronouslyto enable time efficiency
+json javascript object notatio

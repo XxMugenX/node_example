@@ -1,0 +1,19 @@
+
+//use method is a middleware service,it takes in a callback function, it sets up the static and middleware
+
+app.use(express.static('./public'))
+//express.static method gets all the files placed in a certain path made available to it through the parameter, and makes those files available to the server at startup
+//static files are files that are not going to be undergoing any change for a long time, especially at user 's input
+app.get('/',(req,res)=>{
+//instead of using the writehead method to get the  content type header and mime before using the write method to send the file throught the server, the sendfile method from the express.js dependency actually handles these processes, so the parameter  you will be required to provide is the absolute path of the file you want to send when a user makes a request.....absolute path of a file can be gotten by requiring the path module and using the resolve method or the join method to locate the file
+
+
+res.sendFile(path.resolve(__dirname,'./navbar-app/index.html'))
+//sendfile method,used to make necessary files available
+
+
+})
+/* index.html can be placed in public folder to make it available for the Server, it will be treated as the root by default 
+or using SSR , server side rendering
+*/
+})
