@@ -12,13 +12,24 @@ app.use(express.urlencoded({extended: false}
 
 //http methods
 //get method:reads data from a database
+app.use(express.json())
 app.get('/api/people',(req,res)=>{
 res.status(200).json({success:true, data:people})
+})
+app.post('/api/people',(req,res)=>{
+  const {name}=req.body
+  if(!name){
+    return  res.status(400).json({success:false, message:'please provide a name'})
+  }
+ return res.status(201).json({success:true,person:name}
+/*   maps name into people array */
+)
+
 })
 //post methods inserts data, sends data into a database
 app.post('/login',(req,res)=>
 //path is gotten from the form action
-{
+{ 
 /* console.log(req.body) */
 const {name}=req.body
 if(name){
