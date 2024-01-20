@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon dbmodification.js "
+    "start": "nodemon dbmodifiication.js "
   },
   "keywords": [],
   "author": "",
